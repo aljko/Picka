@@ -1,6 +1,6 @@
 <?php
 
-define('HOST','localhost');
-define('BDD','bdd');
-define('USER','user');
-define('PASS','pass');
+define('HOST','remotemysql.com');
+define('BDD','BCCdEpSs6c');
+define('USER','BCCdEpSs6c');
+define('PASS','VGLqUU9MTy');

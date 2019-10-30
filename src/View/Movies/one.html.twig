@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Home/index">Retour</a>
+<h1>Liste des monstres : </h1>
+
+{% for movie in movies %}
+    <h2>{{ movie.title }}</h2>
+    <p>level : {{ movie.level }}</p>
+    <p> attaque : {{ movie.attack }}</p>
+    <p> défense : {{ movie.defense }}</p>
+    <img src="{{ movie.picture }}">
+{% endfor %}
+</body>
+</html>

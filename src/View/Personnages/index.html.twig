@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Home/index">Retour</a>
+<h1>Liste des personnages : </h1>
+
+{% for personnage in personnages %}
+
+        <h2>{{ personnage.nom }}</h2>
+        <p>{{ personnage.prenom }}</p>
+        <p>{{ personnage.niveau }}</p>
+
+
+{% endfor %}
+
+
+
+</body>
+</html>
