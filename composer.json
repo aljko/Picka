@@ -12,7 +12,8 @@
 
     "autoload": {
         "psr-4": {
-            "Symfony\\Component\\": "vendor/symfony/"
+            "Symfony\\Component\\": "vendor/symfony/",
+            "App\\" : "src/"
         }
     }
 }
