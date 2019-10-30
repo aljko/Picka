@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Home/index">Retour</a>
+<h1>Liste des monstres : </h1>
+
+{% for monster in monsters %}
+    {% for monst in monster %}
+        <h2>{{ monst.name }}</h2>
+        <p>level : {{ monst.level }}</p>
+        <p> attaque : {{ monst.attack }}</p>
+        <p> défense : {{ monst.defense }}</p>
+        <img src="{{ monst.picture }}">
+    {% endfor %}
+{% endfor %}
+
+</body>
+</html>
+
+<!--    'id' => int 1
+  'name' => string 'Maid Ghoul' (length=10)
+  'level' => string '4' (length=1)
+  'attack' => int 12
+  'defense' => int 8
+  'special' => string 'First Strike' (length=12)
+  'description' => string 'Death took his humanity but not his skill with the knife.' (length=57)
+  'picture' => string 'https://nsa40.casimages.com/img/2019/10/23/191023045326178266.png' (length=65)
+  'createdAt' => string '2019-10-27T08:55:47.459Z' (length=24)
+  'updatedAt' => string '2019-10-27T08:55:47.459Z' (length=24)

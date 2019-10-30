@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Home/index">Retour</a>
+<h1>Liste des films : </h1>
+
+{% for movie in movies %}
+    {% for mov in movie %}
+        <h2>{{ mov.title }}</h2>
+        <p>{{ mov.director }}</p>
+        <img src="{{ mov.posterUrl }}">
+    {% endfor %}
+{% endfor %}
+
+
+
+</body>
+</html>
+
+<!--   'id' => int 1
+  'title' => string 'Hereditary' (length=10)
+  'director' => string 'Ari_Aster' (length=9)
+  'year' => int 2018
+  'country' => string 'United_States' (length=13)
+  'posterUrl' => string 'https://nsa40.casimages.com/img/2019/10/07/1910070355402418.jpg' (length=63)
+  'createdAt' => string '2019-10-27T08:55:47.432Z' (length=24)
+  'updatedAt' => string '2019-10-27T08:55:47.432Z' (length=24) -->
