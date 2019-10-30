@@ -7,13 +7,14 @@
         }
     ],
     "require": {
-        "symfony/http-client": "^4.3"
+        "symfony/http-client": "^4.3",
+        "twig/twig": "^2.12"
     },
 
     "autoload": {
         "psr-4": {
             "Symfony\\Component\\": "vendor/symfony/",
-            "App\\" : "src/"
+            "App\\" : "src/",
         }
     }
 }

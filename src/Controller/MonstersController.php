@@ -2,8 +2,8 @@
 namespace App\Controller;
 use App\Model\MonstersManager;
 
-
-class MonstersController extends AbstractController
+class MonstersController
 {
+
 
 }

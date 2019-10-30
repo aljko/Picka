@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Manager;
+namespace App\Model;
 
-class MonstersManager extends AbstractManager
+class MonstersManager
 {
-    const API_name = 'monsters';
+    protected $api = 'Monsters';
 }
