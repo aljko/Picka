@@ -6,14 +6,14 @@
 </head>
 <body>
 <a href="/Home/index">Retour</a>
-<h1>Liste des monstres : </h1>
+<h1>Liste des movie : </h1>
 
-{% for movie in movies %}
-    <h2>{{ movie.title }}</h2>
-    <p>level : {{ movie.level }}</p>
-    <p> attaque : {{ movie.attack }}</p>
-    <p> défense : {{ movie.defense }}</p>
-    <img src="{{ movie.picture }}">
-{% endfor %}
+
+    {% for mov in movies %}
+        <h2>{{ mov.title }}</h2>
+        <p>{{ mov.director }}</p>
+        <img src="{{ mov.posterUrl }}">
+    {% endfor %}
+
 </body>
 </html>

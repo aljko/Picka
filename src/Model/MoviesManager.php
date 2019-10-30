@@ -9,8 +9,6 @@ class MoviesManager
     protected $api = 'Movies';
 
 
-
-
     public function getArray():array
     {
 

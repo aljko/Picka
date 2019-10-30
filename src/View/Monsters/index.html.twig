@@ -10,13 +10,22 @@
 <h1>Liste des monstres : </h1>
 
 {% for monster in monsters %}
+    <ul>
     {% for monst in monster %}
-        <h2>{{ monst.name }}</h2>
-        <p>level : {{ monst.level }}</p>
-        <p> attaque : {{ monst.attack }}</p>
-        <p> défense : {{ monst.defense }}</p>
-        <img src="{{ monst.picture }}">
+        <li>id : {{ monst.id }}</li>
+        <li>picture : <img src="{{ monst.picture }}"></li>
+        <li>name : {{ monst.name }}</li>
+        <li>level : {{ monst.level }}</li>
+        <li>attack : {{ monst.attack }}</li>
+        <li>defense : {{ monst.defense }}</li>
+        <li>description : {{ monst.description }}</li>
+        <li>createdAt : {{ monst.createdAt }}</li>
+        <li>updatedAt : {{ monst.updatedAt }}</li>
+        <br>
+        <br>
+        <br>
     {% endfor %}
+    </ul>
 {% endfor %}
 
 </body>

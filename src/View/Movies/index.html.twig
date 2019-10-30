@@ -9,13 +9,20 @@
 <h1>Liste des films : </h1>
 
 {% for movie in movies %}
-    {% for mov in movie %}
-        <h2>{{ mov.title }}</h2>
-        <p>{{ mov.director }}</p>
-        <img src="{{ mov.posterUrl }}">
-    {% endfor %}
+    <ul>
+        {% for mov in movie %}
+            <li>id : {{ mov.id }}</li>
+            <li>posterUrl : <img src="{{ mov.posterUrl }}"></li>
+            <li>title : {{ mov.title }}</li>
+            <li>director : {{ mov.director }}</li>
+            <li>year : {{ mov.year }}</li>
+            <li>country : {{ mov.country }}</li>
+            <li>createdAt : {{ mov.createdAt }}</li>
+            <li>updatedAt : {{ mov.updatedAt }}</li>
+            <br>
+        {% endfor %}
+    </ul>
 {% endfor %}
-
 
 
 </body>
