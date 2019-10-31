@@ -19,13 +19,13 @@ class InventaireController extends AbstractController
 
     }
 
-    public function showOne(int $id)
+    public function showOne(int $page,int $id)
     {
 
         $inventaireManager = new InventaireManager();
         $inventaires = $inventaireManager->selectOne($id);
 
-        return $this->twig->render('Inventaire/index.html.twig', ['inventaires' => $inventaires]);
+        return $this->twig->render('Locations/location'.$page.'.html.twig', ['inventaires' => $inventaires]);
 
     }
 
@@ -33,7 +33,17 @@ class InventaireController extends AbstractController
     {
 
         $inventaireManager = new InventaireManager();
-        $inventaires = $inventaireManager->selectByVue();
+        $inventaires = $inventaireManager->selectByPossederAll();
+
+        return $this->twig->render('Inventaire/index.html.twig', ['inventaires' => $inventaires]);
+
+    }
+
+    public function showVueById($id)
+    {
+
+        $inventaireManager = new InventaireManager();
+        $inventaires = $inventaireManager->selectByIdByVue();
 
         return $this->twig->render('Inventaire/index.html.twig', ['inventaires' => $inventaires]);
 
@@ -58,12 +68,14 @@ class InventaireController extends AbstractController
 
     }
 
-    public function possederInventory(int $id)
+    public function possederInventory(int $page,int $id)
     {
         $inventaireManager = new InventaireManager();
         $inventaires = $inventaireManager->updatePossederTo1($id);
+        $inventaires = $inventaireManager->selectOne($id);
 
-        return $this->twig->render('Inventaire/index.html.twig', ['inventaires' => $inventaires]);
+
+        return $this->twig->render('Locations/location'.$page.'.html.twig', ['inventaires' => $inventaires]);
 
     }
 }

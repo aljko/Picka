@@ -33,10 +33,20 @@ class InventaireManager extends AbstractManager
         return $this->pdo->exec($statement);
     }
 
-    public function selectByVue()
+    public function selectByPossederAll()
     {
-        $statement = ("SELECT * FROM  ".$this->table." WHERE vue=1");
+        $statement = ("SELECT * FROM  ".$this->table." WHERE posseder=1");
         return $this->pdo->query($statement)->fetchAll();
+
+    }
+
+    public function selectByIdByVue($id)
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM $this->table WHERE vue=1 AND id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
 
     }
 
