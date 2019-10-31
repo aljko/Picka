@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% extends 'layout.html.twig' %}
 
-<h1>Voulez vous ...</h1>
-
-<a href="/Monsters/showAll"><p>Voir les monstres ?</p></a>
-<a href="/Movies/showAll"><p>Voir les films ?</p></a>
-<a href="/Personnages/showAll"><p>Voir les personnages ?</p></a>
-<a href="/Inventaire/showAll"><p>Voir l'inventaire ?</p></a>
-
-
-</body>
-</html>
+{% block content %}
+<div class="container">
+    <div class="game-space">
+        <div class="game-box">
+            <a class="play-button" href="/pages/locations/location1.php">Play</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

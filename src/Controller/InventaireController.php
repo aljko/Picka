@@ -29,6 +29,16 @@ class InventaireController extends AbstractController
 
     }
 
+    public function showByVue()
+    {
+
+        $inventaireManager = new InventaireManager();
+        $inventaires = $inventaireManager->selectByVue();
+
+        return $this->twig->render('Inventaire/index.html.twig', ['inventaires' => $inventaires]);
+
+    }
+
 
     public function initialiseGame()
     {

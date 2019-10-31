@@ -33,6 +33,13 @@ class InventaireManager extends AbstractManager
         return $this->pdo->exec($statement);
     }
 
+    public function selectByVue()
+    {
+        $statement = ("SELECT * FROM  ".$this->table." WHERE vue=1");
+        return $this->pdo->query($statement)->fetchAll();
+
+    }
+
 
 
 }
