@@ -2,21 +2,30 @@
 
 {% block content %}
 
-{% include 'Inventaire/inventory.html.twig' %}
+<style type="text/css">.game-space {height: 100%;}.game-box {overflow: scroll;}</style>
 <div class="container">
     <div class="game-space">
         <div class="game-box">
+            <form class="chose-personnages" method="post">
             {% for perso in personnages %}
-                <form method="post">
-                    <img src="{{ perso.fichier }}">
-                    <label for="id">{{ perso.prenom }} {{ perso.nom }}</label>
-                    <input name="id" value="{{ perso.id }}" type="hidden">
-                    <input name="selectionner" type="checkbox" value="1" >
-                    <input type="submit">
-                </form>
+                <div class="personnage-case">
+                    <div class="personnage-case-radio">
+                        <input name="id" value="{{ perso.id }}" type="hidden">
+                        <input name="selectionner" type="radio" value="" >
+                    </div>
+                    <div class="personnage-case-img">
+                        <img src="/assets/images/perso/{{ perso.fichier }}">
+                    </div>
+                    <div class="personnage-case-name">
+                        <label for="id">{{ perso.prenom }} {{ perso.nom }}</label>
+                    </div>
+                </div>
             {% endfor %}
+                <input type="submit">
+            </form>
             <a class="play-button" href="/location/index/1">Play</a>
         </div>
     </div>
 </div>
+
 {% endblock %}

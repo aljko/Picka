@@ -25,6 +25,31 @@ img {
     left: 43%;
     top: calc(41% - -2px);
 }
+.personnage-case {
+    width: 50%;
+    float: left;
+}
+.personnage-case-img {
+    width: 100px;
+    float: left;
+    display: table;
+}
+.personnage-case-name {
+    display: table;
+    height: 100px;
+    line-height: 50px;
+    font-size: 22px;
+    padding-left: 20px;
+    width: 250px;
+    float: left;
+}
+.personnage-case-radio {
+    display: table;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    padding-right: 20px;
+}
 
 /* User box */
 
