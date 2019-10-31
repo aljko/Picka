@@ -94,7 +94,7 @@ class InventaireController extends AbstractController
         if ($inventaires['posseder'] == 1) {
             header('location:/Monstres/killOne/18/1');
         }else{
-            return $this->twig->render('Home/index.html.twig', ['inventaires' => $inventaires]);
+            return $this->twig->render('Locations/location27.html.twig');
         }
     }
 }
