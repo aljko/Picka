@@ -117,6 +117,10 @@ class LocationController extends AbstractController
 
         }
 
+        if($page == 14){
+            header('location:/Inventaire/showOne/'.$page.'/6');
+        }
+
         if($page == 21){
             header('location:/Inventaire/showOne/'.$page.'/9');
         }

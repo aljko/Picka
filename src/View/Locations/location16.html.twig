@@ -12,6 +12,9 @@
             <a href="/location/index/17" class="basement-door link"></a>
             <a href="/location/index/19" class="kitchen link"></a>
             <a href="/location/index/20" class="office link"></a>
+            {% if inventaires.posseder == 0 %}
+                <a href="/inventaire/possederInventory/16/6" class="digicode-link inventory-link"><img src="/assets/images/inventory/key2.png"> </a>
+            {% endif %}
         </div>
     </div>
 </div>
