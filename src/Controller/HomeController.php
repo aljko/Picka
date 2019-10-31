@@ -12,6 +12,7 @@ class HomeController extends AbstractController
     public function index()
     {
 
+
         header('location:/Home/initialiseGame');
       //  return $this->twig->render('Home/index.html.twig');
     }
@@ -22,17 +23,27 @@ class HomeController extends AbstractController
         $inventaires = $inventaireManager->updateTo0All();
 
         $monstresManager = new MonstresManager();
-        $monstres = $monstresManager -> updateToOneVieAll();
+        $monstres = $monstresManager->updateToOneVieAll();
 
         $personnagesManager = new PersonnagesManager();
-        $personnages = $personnagesManager -> updateSelectionnerToZero();
+        $personnages = $personnagesManager->updateSelectionnerToZero();
 
         $autorisationsManager = new AutorisationManager();
-        $autorisation = $autorisationsManager -> updateTo0All();
+        $autorisation = $autorisationsManager->updateTo0All();
 
-        return $this->twig->render('Home/index.html.twig');
+        return header('location:/Home/Players');
 
     }
 
+    public function players()
+    {
+        $personnagesManager = new PersonnagesManager();
+        $personnages = $personnagesManager->selectAll();
 
+        if($_POST){
+            $personnages = $personnagesManager->updateSelectionnerToOne($_POST['id']);
+        }
+
+        return $this->twig->render('Home/index.html.twig',['personnages' => $personnages]);
+    }
 }

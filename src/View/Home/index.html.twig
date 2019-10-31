@@ -6,6 +6,15 @@
 <div class="container">
     <div class="game-space">
         <div class="game-box">
+            {% for perso in personnages %}
+                <form method="post">
+                    <img src="{{ perso.fichier }}">
+                    <label for="id">{{ perso.prenom }} {{ perso.nom }}</label>
+                    <input name="id" value="{{ perso.id }}" type="hidden">
+                    <input name="selectionner" type="checkbox" value="1" >
+                    <input type="submit">
+                </form>
+            {% endfor %}
             <a class="play-button" href="/location/index/1">Play</a>
         </div>
     </div>

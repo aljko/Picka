@@ -86,6 +86,11 @@ class InventaireController extends AbstractController
 
     }
 
+    public function unpossedInventory(int $page, int $id)
+    {
+
+    }
+
     public function getWeapon(int $page, int $idInv, int $idMons)
     {
         $inventaireManager = new InventaireManager();

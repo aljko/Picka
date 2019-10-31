@@ -60,7 +60,7 @@ class LocationController extends AbstractController
 
 
         if($page == 8){
-            header('location:/Monstres/showOne/8/1');
+            header('location:/Monstres/showOne/8/2');
         }
 
         if($page == 12) {
@@ -102,7 +102,7 @@ class LocationController extends AbstractController
         }
 
         if($page == 18){
-            header('location:/Monstres/showOne/18/1');
+            header('location:/Monstres/showOne/'.$page.'/1');
         }
         if($page == 19) {
             $monstresManager = new MonstresManager();
@@ -112,7 +112,7 @@ class LocationController extends AbstractController
                 header('location:/Inventaire/showOne/'.$page.'/3');
 
             }else{
-                header('location:/Monstres/showOne/'.$page.'/1');
+                header('location:/Monstres/showOne/'.$page.'/3');
             }
 
         }
@@ -133,7 +133,7 @@ class LocationController extends AbstractController
             }
         }
         if($page == 25){
-            header('location:/Monstres/showOne/25/1');
+            header('location:/Monstres/showOne/25/4');
         }
 
         return $this->twig->render('Locations/location'.$page.'.html.twig', ['inventaires' => $inventaires, 'personnages' => $personnages]);
