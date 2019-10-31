@@ -1,18 +1,29 @@
-{% for perso in personnages %}
-<img src="/assets/images/perso/{{ perso.fichier }}">
-{% endfor %}
-
 <div class="gamer-space">
+
     <div class="gamer-box">
+
+        <div class="gamer-personnage">
+            <div class="gamer-personnage-pic">
+                {% for perso in personnages %}
+                    <img src="/assets/images/perso/{{ perso.fichier }}">
+                {% endfor %}
+            </div>
+            <div class="gamer-personnage-name">
+                {% for perso in personnages %}
+                    <span>{{ perso.prenom }} {{ perso.nom }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
         <div class="gamer-inventory">
             <div class="inventory-objects">
                 <h1>Inventaire</h1>
-
             {% for invent in inventaires %}
                 <img src="/assets/images/inventory/{{ invent.fichier }}">
             {% endfor %}
-
             </div>
         </div>
+
     </div>
+
 </div>
