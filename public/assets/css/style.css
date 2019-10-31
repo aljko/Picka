@@ -8,6 +8,37 @@ img {
     max-width: 100%;
 }
 
+/* User box */
+
+.gamer-space {
+    height: 100px;
+    width: 100%;
+    background-color: #1c1b1b;
+    z-index: 10;
+}
+.gamer-space img {
+    height:   54px;
+    padding: 4px;
+}
+.inventory-objects {
+    width: 50%;
+    float: right;
+    background-color: #391212;
+    height: 86px;
+    border-radius: 5px;
+    margin: 6px;
+}
+.inventory-objects h1 {
+    font-size: 18px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #ffffff94;
+    font-weight: unset;
+    font-family: 'Verdana';
+}
+
+
 /* Game space */
 
 .play-button {
@@ -31,7 +62,7 @@ img {
 }
 .game-space {
     width: 100%;
-    height:  100%;
+    height:  calc(100% - 100px);
     position: absolute;
     background-image: url("/assets/images/game/texture.jpg");
 }
