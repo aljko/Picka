@@ -1,10 +1,9 @@
-<p>test</p>
-
-{% for inventaire in inventaires %}
-
-    <h2>{{ inventaire.nom }}</h2>
-    <p>{{ inventaire.vue }}</p>
-    <p>{{ inventaire.posseder }}</p>
-
-
+{% for perso in personnages %}
+<img src="/assets/images/perso/{{ perso.fichier }}">
 {% endfor %}
+
+
+{% for invent in inventaires %}
+    <img src="/assets/images/inventory/{{ invent.fichier }}">
+{% endfor %}
+
