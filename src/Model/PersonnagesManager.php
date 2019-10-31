@@ -26,4 +26,11 @@ class PersonnagesManager extends AbstractManager
         return $this->pdo->exec($statement);
     }
 
+    public function selectBySelectionner()
+    {
+        $statement = ("SELECT * FROM  ".$this->table." WHERE selectionner=1");
+        return $this->pdo->query($statement)->fetchAll();
+
+    }
+
 }

@@ -6,6 +6,7 @@ use App\Model\LocationManager;
 use App\Model\AutorisationManager;
 use App\Model\MonstersManager;
 use App\Model\InventaireManager;
+use App\Model\PersonnagesManager;
 
 
 
@@ -15,6 +16,13 @@ class LocationController extends AbstractController
 
     public function index(int $page)
     {
+
+        $inventaireManager = new InventaireManager();
+        $inventaires = $inventaireManager->selectByPossederAll();
+
+        $personnageManager = new PersonnagesManager();
+        $personnages = $personnageManager->selectBySelectionner();
+
 
         if($page == 3){
             header('location:/Inventaire/showOne/3/7');
@@ -38,7 +46,7 @@ class LocationController extends AbstractController
             header('location:/Monstres/showOne/18/1');
         }
 
-        return $this->twig->render('Locations/location'.$page.'.html.twig');
+        return $this->twig->render('Locations/location'.$page.'.html.twig', ['inventaires' => $inventaires, 'personnages' => $personnages]);
 
     }
 
