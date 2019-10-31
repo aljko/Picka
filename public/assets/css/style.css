@@ -253,3 +253,12 @@ img {
     top: 33%;
     left: 44%;
 }
+
+/* Inventory links */
+
+.digicode-link {
+    position: absolute;
+    top: 37%;
+    width: 50px;
+    left: 87%;
+}
