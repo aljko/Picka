@@ -8,6 +8,24 @@ img {
     max-width: 100%;
 }
 
+/* Other */
+
+.door1-form #codedigit {
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: #4738f2;
+    width: 106px;
+    height: 39px;
+    font-size: 34px;
+    color: #fff;
+    padding-left: 22px;
+    border-radius: 8px;
+}
+.door1-form {
+    position: absolute;
+    left: 43%;
+    top: calc(41% - -2px);
+}
+
 /* User box */
 
 .gamer-space {
