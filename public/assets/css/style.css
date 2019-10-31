@@ -50,6 +50,10 @@ img {
     float: left;
     padding-right: 20px;
 }
+.keybx {
+    top: 33%;
+    left: calc(46% - -3px);
+}
 
 /* User box */
 
