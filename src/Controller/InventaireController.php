@@ -9,6 +9,13 @@ use App\Model\InventaireManager;
 class InventaireController extends AbstractController
 {
 
+    public function inventory()
+    {
+        $inventaireManager = new InventaireManager();
+        $inventaires = $inventaireManager->selectAll();
+        return $this->twig->render('Locations/location1.html.twig', ['inventaires' => $inventaires]);
+    }
+
     public function showAll()
     {
 
@@ -55,7 +62,7 @@ class InventaireController extends AbstractController
         $inventaireManager = new InventaireManager();
         $inventaires = $inventaireManager->updateTo0All();
 
-        return $this->twig->render('Inventaire/index.html.twig', ['inventaires' => $inventaires]);
+        return $this->twig->render('Home/index.html.twig');
 
     }
 
@@ -77,5 +84,17 @@ class InventaireController extends AbstractController
 
         return $this->twig->render('Locations/location'.$page.'.html.twig', ['inventaires' => $inventaires]);
 
+    }
+
+    public function getWeapon(int $page, int $id)
+    {
+        $inventaireManager = new InventaireManager();
+        $inventaires = $inventaireManager->selectOne($id);
+
+        if ($inventaires['posseder'] == 1) {
+            header('location:/Monstres/killOne/18/1');
+        }else{
+            return $this->twig->render('Home/index.html.twig', ['inventaires' => $inventaires]);
+        }
     }
 }

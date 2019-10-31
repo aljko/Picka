@@ -20,21 +20,22 @@ class LocationController extends AbstractController
             header('location:/Inventaire/showOne/3/7');
         }
 
-        if($page == 5){
-            if($_POST && $_POST['digicode']){
-                $this->auto6 = 1;
 
-            }
+
+
+        if($page == 5){
             return $this->twig->render('Locations/location'.$page.'.html.twig');
         }
 
         if($page == 6){
-            if($this->auto6 == 1 ){
-                return $this->twig->render('Locations/location'.$page.'.html.twig');
-            }else{
-                return 'nope';
-            }
 
+            return $this->twig->render('Locations/location'.$page.'.html.twig');
+
+
+        }
+
+        if($page == 18){
+            header('location:/Monstres/showOne/18/1');
         }
 
         return $this->twig->render('Locations/location'.$page.'.html.twig');

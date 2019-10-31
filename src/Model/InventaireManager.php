@@ -16,7 +16,7 @@ class InventaireManager extends AbstractManager
 
     public function updateTo0All()
     {
-        $statement = ("UPDATE ".$this->table." SET vue='0', posseder='0' WHERE id>=0");
+        $statement = ("UPDATE ".$this->table." SET posseder='0' WHERE id>=0");
         return $this->pdo->exec($statement);
 
     }

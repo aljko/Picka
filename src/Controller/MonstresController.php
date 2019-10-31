@@ -18,22 +18,24 @@ class MonstresController extends AbstractController
 
     }
 
-    public function showOne(int $id)
+    public function showOne(int $page,int $id)
     {
 
         $monstresManager = new MonstresManager();
         $monstres = $monstresManager -> selectOne($id);
 
-        return $this->twig->render('Monstres/index.html.twig', ['monstres' => $monstres]);
+        return $this->twig->render('Locations/location'.$page.'.html.twig', ['monstres' => $monstres]);
+
 
     }
 
-    public function killOne(int $id)
+    public function killOne(int $page, int $id)
     {
+
         $monstresManager = new MonstresManager();
         $monstres = $monstresManager -> updateVieToZero($id);
 
-        return $this->twig->render('Monstres/index.html.twig', ['monstres' => $monstres]);
+        return $this->twig->render('Locations/location'.$page.'.html.twig', ['monstres' => $monstres]);
     }
 
 
