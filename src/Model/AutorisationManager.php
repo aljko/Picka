@@ -15,8 +15,8 @@ class AutorisationManager extends AbstractManager
 
     public function selectByPage($page)
     {
-        $statement = ("SELECT * FROM  ".$this->table." WHERE page=".$page);
-        return $this->pdo->query($statement)->fetchAll();
+        $statement = "SELECT * FROM  ".self::TABLE." WHERE page=".$page;
+        return $this->pdo->query($statement)->fetch();
 
     }
 }

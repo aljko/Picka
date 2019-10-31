@@ -15,7 +15,7 @@ class MonstersController extends AbstractController
 
     }
 
-    public function showOne(int $id)
+    public function showOne(int $page, int $id)
     {
         $monstersManager = new MonstersManager();
         $monsters = $monstersManager -> getOneArrayById($id);
