@@ -265,14 +265,31 @@ img {
 
 /* Monsters */
 
+.monster {
+    display: block;
+    position: absolute;
+}
 .deadSlave {
     height: 365px;
     top: 10%;
-    display: block;
-    position: absolute;
     left: 40%;
     overflow: hidden;
 }
 .deadSlave, .deadSlave img {
     width: 250px;
+}
+.carrionScreecher {
+    top: 0;
+    left: 35%;
+}
+.demoniacCat {
+    top: 12%;
+    left: 37%;
+}
+.corpseBlockade, .corpseBlockade img {
+    width: 400px;
+}
+.corpseBlockade {
+    top: -12%;
+    left: 39%;
 }
