@@ -86,13 +86,13 @@ class InventaireController extends AbstractController
 
     }
 
-    public function getWeapon(int $page, int $id)
+    public function getWeapon(int $page, int $idInv, int $idMons)
     {
         $inventaireManager = new InventaireManager();
-        $inventaires = $inventaireManager->selectOne($id);
+        $inventaires = $inventaireManager->selectOne($idInv);
 
         if ($inventaires['posseder'] == 1) {
-            header('location:/Monstres/killOne/18/1');
+            header('location:/Monstres/killOne/'.$page.'/'.$idMons);
         }else{
             return $this->twig->render('Locations/location27.html.twig');
         }

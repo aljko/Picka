@@ -28,5 +28,13 @@ class PersonnagesController extends AbstractController
 
     }
 
+    public function selectOne($id)
+    {
+        $personnagesManager = new PersonnagesManager();
+        $personnages = $personnagesManager -> updateSelectionnerToOne($id);
+
+        return $this->twig->render('Personnages/index.html.twig', ['personnages' => $personnages]);
+    }
+
 
 }

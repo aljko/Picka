@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<a href="/Home/index">Retour</a>
-<h1>Liste des monstres : </h1>
 
 {% for monster in monsters %}
 <h2>{{ monster.name }}</h2>
 <p>level : {{ monster.level }}</p>
 <p> attaque : {{ monster.attack }}</p>
 <p> défense : {{ monster.defense }}</p>
-<img src="{{ monster.picture }}">
 {% endfor %}
-</body>
-</html>

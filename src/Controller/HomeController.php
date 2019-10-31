@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Model\InventaireManager;
 use App\Model\MonstresManager;
 use App\Model\PersonnagesManager;
+use App\Model\AutorisationManager;
 
 class HomeController extends AbstractController
 {
@@ -26,6 +27,8 @@ class HomeController extends AbstractController
         $personnagesManager = new PersonnagesManager();
         $personnages = $personnagesManager -> updateSelectionnerToZero();
 
+        $autorisationsManager = new AutorisationManager();
+        $autorisation = $autorisationsManager -> updateTo0All();
 
         return $this->twig->render('Home/index.html.twig');
 

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\MonstresManager;
+use App\Model\MonstersManager;
 
 
 class MonstresController extends AbstractController
@@ -24,7 +25,10 @@ class MonstresController extends AbstractController
         $monstresManager = new MonstresManager();
         $monstres = $monstresManager -> selectOne($id);
 
-        return $this->twig->render('Locations/location'.$page.'.html.twig', ['monstres' => $monstres]);
+        $monstersManager = new MonstersManager();
+        $monsters = $monstersManager -> search('name',$monstres['name']);
+
+        return $this->twig->render('Locations/location'.$page.'.html.twig', ['monstres' => $monstres, 'monsters' => $monsters]);
 
 
     }
