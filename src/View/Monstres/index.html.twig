@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Home/index">Retour</a>
+<h1>Liste des personnages : </h1>
+
+{% for monstre in monstres %}
+
+    <h2>{{ monstre.id }}</h2>
+    <p>{{ monstre.life }}</p>
+    <p>{{ monstre.name }}</p>
+    <li>picture : <img src="{{ monstre.picture }}"></li>
+
+
+{% endfor %}
+
+
+
+</body>
+</html>
