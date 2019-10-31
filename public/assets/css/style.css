@@ -8,17 +8,7 @@ img {
     max-width: 100%;
 }
 
-/*  */
-
-form {
-   position:absolute;
-    bottom:52%;
-    left:42%;
-}
-
-input {
-    height:50px;
-}
+/* Game space */
 
 .play-button {
     background-color: #1ea41e;
@@ -39,14 +29,11 @@ input {
 .play-button:hover {
     background-color: #22b322;
 }
-
-/*  */
 .game-space {
     width: 100%;
     height:  100%;
     position: absolute;
     background-image: url("/assets/images/game/texture.jpg");
-
 }
 .game-box {
     width: 960px;
@@ -136,41 +123,133 @@ input {
 .link {
     display: block;
     position: absolute;
-    background-color: red;
+    /*background-color: red;*/
     opacity: 0.3;
+    border-radius: 10px;
 }
-
+.link:hover {
+    background-color: #fff;
+    opacity: 0.1;
+}
 .digicode {
     width: 24px;
     height: 50px;
     top: 50%;
     left: 55%;
 }
-
 .door1 {
     width: 126px;
     height: 303px;
     top: 25%;
     left: 29%;
 }
-
 .panel {
     width: 43px;
     height: 84px;
     top: 24%;
     left: 48%;
 }
-
 .elevator {
-    width: 150px;
-    height: 400px;
-    top: 9%;
-    left: 27%;
+    width: 175px;
+    height: 488px;
+    top: 8%;
+    left: 25%;
 }
-
 .elevator-buttons {
     width: 30px;
     height: 101px;
     top: 37%;
     left: 52%;
+}
+.elevator-blood {
+    width: 113px;
+    height: 200px;
+    top: 81%;
+    left: 34%;
+    transform: rotate(68deg);
+}
+.elevator-button5 {
+    width: 59px;
+    height: 56px;
+    top: 35%;
+    left: 56%;
+}
+.elevator-button0 {
+    width: 64px;
+    height: 56px;
+    top: 71%;
+    left: 42%;
+}
+.placard {
+    width: 106px;
+    height: 526px;
+    left: 81%;
+    top: 2%;
+    transform: rotate(2deg);
+}
+.door2 {
+    width: 185px;
+    height: 420px;
+    top: 17%;
+    left: 18%;
+}
+.keybox1 {
+    width: 75px;
+    height: 165px;
+    top: 36%;
+    left: 33%;
+}
+.keybox2 {
+    width: 248px;
+    height: 326px;
+    left: 40%;
+    top: 18%;
+}
+.handle1 {
+    width: 90px;
+    height: 220px;
+    top: 35%;
+    left: 49%;
+}
+.basement-door {
+    width: 85px;
+    height: 265px;
+    left: 76%;
+    top: 55%;
+    transform: skew(0deg, 24deg);
+}
+.kitchen {
+    width: 67px;
+    height: 360px;
+    top: 24%;
+    left: 27%;
+}
+.office {
+    width: 142px;
+    height: 203px;
+    top: 0;
+    left: 56%;
+}
+.basement-door-open {
+    width: 477px;
+    height: 436px;
+    top: 19%;
+    left: 29%;
+}
+.manager {
+    width: 295px;
+    height: 100%;
+    top: 0;
+}
+.door3 {
+    width: 296px;
+    height: 100%;
+    top: 0;
+    left: 60%;
+}
+.handle2 {
+    width: 280px;
+    height: 218px;
+    top: 33%;
+    left: 44%;
 }
