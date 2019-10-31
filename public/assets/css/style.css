@@ -256,11 +256,45 @@ img {
 
 /* Inventory links */
 
-.digicode-link {
+.inventory-link {
     position: absolute;
+}
+.digicode-link {
     top: 37%;
     width: 50px;
     left: 87%;
+}
+.axe-link, .axe-link img {
+    width: 160px;
+}
+.axe-link {
+    top: 36%;
+    transform: rotate(285deg);
+    left: 26%;
+}
+.crowbar-link {
+    width: 150px;
+    top: 49%;
+    left: 31%;
+    transform: rotate(206deg);
+}
+.knife-link {
+    top: 56%;
+    width: 105px;
+    left: 78%;
+    transform: rotate(328deg);
+}
+.extinguisher-link {
+    top: 23%;
+    width: 300px;
+    left: 38%;
+    transform: rotate(56deg);
+}
+.key-link {
+    top: 26%;
+    width: 200px;
+    left: 33%;
+    transform: rotate(-8deg);
 }
 
 /* Monsters */
