@@ -6,18 +6,13 @@
 </head>
 <body>
 <a href="/Home/index">Retour</a>
+
 <h1>Liste des inventaire : </h1>
 
 {% for inventaire in inventaires %}
-
     <h2>{{ inventaire.nom }}</h2>
-    <p>{{ inventaire.vue }}</p>
     <p>{{ inventaire.posseder }}</p>
-
-
 {% endfor %}
-
-
 
 </body>
 </html>
