@@ -2,8 +2,17 @@
 <img src="/assets/images/perso/{{ perso.fichier }}">
 {% endfor %}
 
+<div class="gamer-space">
+    <div class="gamer-box">
+        <div class="gamer-inventory">
+            <div class="inventory-objects">
+                <h1>Inventaire</h1>
 
-{% for invent in inventaires %}
-    <img src="/assets/images/inventory/{{ invent.fichier }}">
-{% endfor %}
+            {% for invent in inventaires %}
+                <img src="/assets/images/inventory/{{ invent.fichier }}">
+            {% endfor %}
 
+            </div>
+        </div>
+    </div>
+</div>
