@@ -262,3 +262,17 @@ img {
     width: 50px;
     left: 87%;
 }
+
+/* Monsters */
+
+.deadSlave {
+    height: 365px;
+    top: 10%;
+    display: block;
+    position: absolute;
+    left: 40%;
+    overflow: hidden;
+}
+.deadSlave, .deadSlave img {
+    width: 250px;
+}
